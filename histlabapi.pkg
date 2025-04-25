@@ -1,0 +1,8 @@
+v 3
+d 'histlabapi': Stata module to interact with History Lab API
+d
+d Distribution-Date:   20250425
+d License: Academic Free License v3.0
+d
+F histlabapi.ado
+F histlabapi.sthlp
