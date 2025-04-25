@@ -116,7 +116,7 @@ _Full-text search:_
 - ```histlabapi text, collection(cfpf) start(01/01/1950) end(12/31/2000) text(udeac)```
 - ```histlabapi text ,  collection(frus,cfpf) start(1/1/1950) end(12/31/2000) text(udeac, asean) orlist("or")  limit(20)```
 
-- ```histlabapi text , collection(frus,cfpf) start(1/1/1950) end(12/31/2000) text(united nations) limit(200)``
+- ```histlabapi text , collection(frus,cfpf) start(1/1/1950) end(12/31/2000) text(united nations) limit(200)```
 
 ## Notes
 
