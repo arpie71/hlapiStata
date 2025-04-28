@@ -2,6 +2,10 @@
 
 This Stata package offers a command to use the History Lab API in order to download data from our collections. 
 
+To install the package, type ```net install histlabapi , from("https://raw.githubusercontent.com/arpie71/hlapiStata/main/")``` at Stata's command line.
+
+Note that for Stata versions greater or equal to 16, the command uses a Python module to parse the json output. For versions before 16, Mata is used to parse the output. 
+
 ## Collections
 
 The History Lab API has documents available from 11 different collections, as detailed below. The R functions will search across all collections, unless a specific collection or set of collections is specified. 
@@ -43,7 +47,7 @@ The API can return many different fields which are described in the table below.
 The command has a number of different options to conduct various types of searches on History Lab documents.
 
 ### Syntax
-   ```histlabapi option ,[date(string) start(string) end(string) text(string) id(string) COLlection(string) fields(string) entitytype(string) entityvalue(string) topicvalue(string) overview(string) sort(string)  limit(integer 25) orlist(string)]```
+```histlabapi option ,[date(string) start(string) end(string) text(string) id(string) COLlection(string) fields(string) entitytype(string) entityvalue(string) topicvalue(string) overview(string) sort(string)  limit(integer 25) orlist(string)]```
 
 
 ## Options
@@ -88,7 +92,6 @@ The `orlist` option specifies whether a search should be an "or" search or an "a
 
 The `limit` parameter tells the API how many results to return. The default value is 25 and there is a system maximum of 10,000.
 
-
 ## Examples
 
 _ID search:_
@@ -122,9 +125,9 @@ _Full-text search:_
 
 We also provide two commands to look up Wikidata IDs (for an `entity` search) and topic IDs (for a `topic` search.  
 
-`find_wiki_id` _anything_ will perform a search of the database and return all entities and Wikidata IDs that partially match a given string.
+- `find_wiki_id _anything_` will perform a search of the database and return all entities and Wikidata IDs that partially match a given string.
 
-`find_topic_id` _anything_ will perform a search of the database and return all topics and topic IDs that partially match a given string. The topic names are in all lower case. The command will convert search terms to lower case.
+- `find_topic_id _anything_` will perform a search of the database and return all topics and topic IDs that partially match a given string. The topic names are in all lower case. The command will convert search terms to lower case.
 
 ### Examples
 - ```find_wiki_id "China" /* China Wikidata ID is Q148 */```
